@@ -4,44 +4,79 @@ $primary: lightgray;
     padding: 0;
     outline: 0;
     }
-    body {
-        background: $primary;
-        background-image: url(../photos/bg.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    
+body {
+    width: 100%;
+    background: $primary;
+    background-image: url(../photos/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: smooth;
     }
 .container {
-   //position: absolute;
-     background-color: red;}
-   //opacity: 45%;
-   
+    //max-width: 1200px;
+    min-width: 100%;   
+    display: block;
+   padding-bottom: 40px;
+    background-color: lightgreen;
     #myInput {
-        width: 70%;
+        width: 50%;
+        display: block;
         margin: 30px auto;
-        //text-align: center;
-        font-size: 16px;
+        font-size: 18px;
         color: #000;
         font-weight: bold;
         padding: 12px;
-        //opacity: 45%;
-        } 
+        border-radius: 5px;
+        
+            &:hover {
+            opacity: 100%;
+            transition: all 0.2s ease-in-out;
+                }&:focus {
+                opacity: 100%;
+                transition: all 0.2s ease-in-out;
+                }}}
 
-// .container {
-//     width: 95%;   
-//     display: grid;
-//     grid-gap: 10px;
-//     }
-// .container img{
-//     transition: 0.5s;
-//     // padding: 15px;
-//      width: 200px;
-//     }
+                .gallery{
+                    list-style: none;
+                    width: 100%;
+                    max-width: 900px;
+                    display: grid;
+                    gap: 15px;                    
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/*  width*/
+                    grid-template-rows: repeat(auto-fit, 1fr);/* height*/
+                    margin: 0px auto;
+                         }
+                img[class^="image-"] {
+                display: grid;
+                margin: 0 auto;
+                border: 1px solid magenta;
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+                    &:hover{
+                        transform: scale(1.1); 
+                        transition: all .2s cubic-bezier(.17,-0.2,.86,1.2);
+                        }
+                }
+                       
+                        
+                
+                .image-1{
+                    grid-area: img1;
+                }
 
-// .container img:hover {
-//     //filter: grayscale(100%);
-//     transform: scale(1.1); 
-//     }
+                
+    
+ .clearfix::before {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+
+.container img:hover {
+    //filter: grayscale(100%);
+    // transform: scale(1.1); 
+    // transition: all .2s cubic-bezier(.17,-0.2,.86,1.2);
+    }
 
 

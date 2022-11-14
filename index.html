@@ -1,31 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-   
-<div class="container">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="search here...">
-    <div class="gallery">
-        <a href="photos/01.jpg"><img src="photos/thumbnails/01.jpg" alt=""></a>
-        <a href="photos/02.jpg"><img src="photos/thumbnails/02.jpg" alt=""></a>
-        <a href="photos/03.jpg"><img src="photos/thumbnails/03.jpg" alt=""></a>
-        <a href="photos/04.jpg"><img src="photos/thumbnails/04.jpg" alt=""></a>
-        <a href="photos/05.jpg"><img src="photos/thumbnails/05.jpg" alt=""></a>
-        <a href="photos/06.jpg"><img src="photos/thumbnails/06.jpg" alt=""></a>
-        <a href="photos/07.jpg"><img src="photos/thumbnails/07.jpg" alt=""></a>
-        <a href="photos/08.jpg"><img src="photos/thumbnails/08.jpg" alt=""></a>
-        <a href="photos/09.jpg"><img src="photos/thumbnails/09.jpg" alt=""></a>
-        <a href="photos/10.jpg"><img src="photos/thumbnails/10.jpg" alt=""></a>
-        <a href="photos/11.jpg"><img src="photos/thumbnails/11.jpg" alt=""></a>
-        <a href="photos/12.jpg"><img src="photos/thumbnails/12.jpg" alt=""></a>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"
+      integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.css"
+      integrity="sha512-3eoKq7cU6gdVeT+6eL40YcJLD8dxzQmOK54qxUWVjg7H4NN3u5AA5k5ywrqLV15hOZDBBgdQH/GK5CA9MwDVwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/baguetteBox.min.css" />
+    <script src="js/baguetteBox.min.js" async></script>
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container clearfix">
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Search"
+      />
+
+      <div class="gallery">
+        <a
+          href="photos/1.jpg"
+          data-caption="I love hay bales. Took this snap on a drive through the countryside past some straw fields."
+        >
+          <img src="photos/thumbnails/1.jpg" class="image-1" alt="Hay Bales" />
+        </a>
+
+        <a
+          href="photos/2.jpg"
+          data-caption="The lake was so calm today. We had a great view of the snow on the mountains from here."
+        >
+          <img src="photos/thumbnails/2.jpg" class="image-2" alt="Lake" />
+        </a>
+
+        <a
+          href="photos/3.jpg"
+          data-caption="I hiked to the top of the mountain and got this picture of the canyon and trees below."
+        >
+          <img src="photos/thumbnails/3.jpg" class="image-3" alt="Canyon" />
+        </a>
+        <a
+          href="photos/4.jpg"
+          data-caption="It was amazing to see an iceberg up close, it was so cold but didn’t snow today"
+        >
+          <img src="photos/thumbnails/4.jpg" class="image-4" alt="Iceberg" />
+        </a>
+
+        <a
+          href="photos/5.jpg"
+          data-caption="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons."
+        >
+          <img src="photos/thumbnails/5.jpg" class="image-5" alt="Desert" />
+        </a>
+
+        <a
+          href="photos/6.jpg"
+          data-caption="Fall is coming, I love when the leaves on the trees start to change color."
+        >
+          <img src="photos/thumbnails/6.jpg" class="image-6" alt="Fall" />
+        </a>
+        <a
+          href="photos/7.jpg"
+          data-caption="I drove past this plantation yesterday, everything is so green!"
+        >
+          <img src="photos/thumbnails/7.jpg" class="image-7" alt="Plantation" />
+        </a>
+
+        <a
+          href="photos/8.jpg"
+          data-caption="My summer vacation to the Oregon Coast. I love the sandy dunes!"
+        >
+          <img src="photos/thumbnails/8.jpg" class="image-8" alt="Dunes" />
+        </a>
+
+        <a
+          href="photos/9.jpg"
+          data-caption="We enjoyed a quiet stroll down this countryside lane."
+        >
+          <img
+            src="photos/thumbnails/9.jpg"
+            class="image-9"
+            alt="Countryside Lane"
+          />
+        </a>
+        <a
+          href="photos/10.jpg"
+          data-caption="Sunset at the coast! The sky turned a lovely shade of orange."
+        >
+          <img src="photos/thumbnails/10.jpg" class="image-10" alt="Sunset" />
+        </a>
+
+        <a
+          href="photos/11.jpg"
+          data-caption="I did a tour of a cave today and the view of the landscape below was breathtaking."
+        >
+          <img src="photos/thumbnails/11.jpg" class="image-11" alt="Cave" />
+        </a>
+
+        <a
+          href="photos/12.jpg"
+          data-caption="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."
+        >
+          <img
+            src="photos/thumbnails/12.jpg"
+            class="image-12"
+            alt="Bluebells"
+          />
+        </a>
+      </div>
     </div>
-</div>
-</body>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/baguetteBox.min.js"></script>
+  </body>
 </html>
