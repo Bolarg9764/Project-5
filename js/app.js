@@ -1,21 +1,29 @@
-baguetteBox.run(".baguetteBoxThree", {
+baguetteBox.run(".gallery", {
   animation: "fadeIn",
   noScrollbars: true,
 });
 
-/* baguetteBox.run(".gallery"); */
-
 const myInput = document.getElementById("myInput");
 
-/* console.log(myInput);
 myInput.addEventListener("keyup", (e) => {
   let currentValue = e.target.value.toLowerCase();
-  let authors = document.querySelectorAll("img.image");
-  authors.forEach((author) => {
-    if (author.textContent.toLocaleLowerCase().includes(currentValue)) {
-      author.parentNode.style.display = "block";
+  let anchors = document.querySelectorAll(".gallery a");
+  anchors.forEach((anchor) => {
+    if (
+      anchor
+        .getAttribute("data-caption")
+        .toLocaleLowerCase()
+        .includes(currentValue)
+    ) {
+      anchor.style.display = "block";
     } else {
-      author.parentNode.style.display = "none";
+      anchor.style.display = "none";
     }
   });
-}); */
+});
+
+const TheseImages = document.querySelectorAll(".TheseImages");
+TheseImages.forEach((image) => {
+  let randomAniDelay = Math.floor(Math.random() * 500);
+  image.style.animation = `fadeIn 1s .${randomAniDelay}s ease fowards`;
+});

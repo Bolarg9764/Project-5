@@ -1,82 +1,90 @@
 $primary: lightgray;
-*{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
 body {
-    width: 100%;
-    background: $primary;
-    background-image: url(../photos/bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: smooth;
-    }
+  width: 100%;
+  background: $primary;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: smooth;
+}
 .container {
-    //max-width: 1200px;
-    min-width: 100%;   
+  max-width: 1200px;
+  min-width: 100%;
+  display: block;
+  padding-bottom: 40px;
+  backdrop-filter: blur(10px);
+  background-color: lightgreen;
+  #myInput {
+    width: 50%;
     display: block;
-   padding-bottom: 40px;
-    background-color: lightgreen;
-    #myInput {
-        width: 50%;
-        display: block;
-        margin: 30px auto;
-        font-size: 18px;
-        color: #000;
-        font-weight: bold;
-        padding: 12px;
-        border-radius: 5px;
-        
-            &:hover {
-            opacity: 100%;
-            transition: all 0.2s ease-in-out;
-                }&:focus {
-                opacity: 100%;
-                transition: all 0.2s ease-in-out;
-                }}}
+    margin: 30px auto;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
 
-                .gallery{
-                    list-style: none;
-                    width: 100%;
-                    max-width: 900px;
-                    display: grid;
-                    gap: 15px;                    
-                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/*  width*/
-                    grid-template-rows: repeat(auto-fit, 1fr);/* height*/
-                    margin: 0px auto;
-                         }
-                img[class^="image-"] {
-                display: grid;
-                margin: 0 auto;
-                border: 1px solid magenta;
-                box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-                    &:hover{
-                        transform: scale(1.1); 
-                        transition: all .2s cubic-bezier(.17,-0.2,.86,1.2);
-                        }
-                }
-                       
-                        
-                
-                .image-1{
-                    grid-area: img1;
-                }
-
-                
-    
- .clearfix::before {
-    content: "";
-    clear: both;
-    display: table;
+    &:hover {
+      opacity: 100%;
+      transition: all 0.2s ease-in-out;
     }
+    &:focus {
+      opacity: 100%;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
 
+.gallery {
+  list-style: none;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*  width*/
+  grid-template-rows: repeat(auto-fit, 1fr); /* height*/
+  margin: 0px auto;
+}
+img[class^="image-"] {
+  display: grid;
+  margin: 0 auto;
+  border: 1px solid magenta;
+  opacity: 0;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.2s cubic-bezier(0.17, -0.2, 0.86, 1.2);
+  }
+}
+
+.image-1 {
+  grid-area: img1;
+}
+
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 .container img:hover {
-    //filter: grayscale(100%);
-    // transform: scale(1.1); 
-    // transition: all .2s cubic-bezier(.17,-0.2,.86,1.2);
-    }
+  //filter: grayscale(100%);
+  // transform: scale(1.1);
+  // transition: all .2s cubic-bezier(.17,-0.2,.86,1.2);
+}
 
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
